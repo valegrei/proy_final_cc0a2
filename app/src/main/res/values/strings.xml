@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Proyecto Final</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="lorem_ipsum_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</string>
+    <string name="title_example">Lorem Ipsum Passage</string>
+    <string name="text_comentarios">Comentarios: %d</string>
+    <string name="text_title">Título</string>
+    <string name="hint_title">Ingrese un título</string>
+    <string name="text_body">Contenido</string>
+    <string name="hint_body">Escriba su post</string>
+    <string name="text_image">URL de Imagen</string>
+    <string name="hint_url_image">Ingrese una url de la imagen</string>
+    <string name="text_email">Correo</string>
+    <string name="hint_email">Ingrese su correo</string>
+    <string name="text_post">Publicar</string>
+    <string name="text_comment">Comentario</string>
+    <string name="hint_comment">Escriba su comentario</string>
+    <string name="text_btn_comment">Comentar</string>
+    <string name="user_descr">Foto de usuario</string>
+    <string name="photo_descr">Imagen</string>
+    <string name="comment_descr">Comentar</string>
+    <string name="add_descr">Postear</string>
 </resources>

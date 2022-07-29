@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/drawable/ic_account.xml" value="0.242" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/activity_feed.xml" value="0.2" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/activity_main.xml" value="0.10208333333333333" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/activity_new_comment.xml" value="0.2" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/activity_post.xml" value="0.176" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/comment_layout.xml" value="0.18478260869565216" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/post_item_layout.xml" value="0.1985494106980961" />
+        <entry key="..\:/Moviles/2022-1/pc5/app/src/main/res/layout/post_layout.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
