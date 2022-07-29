@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ly_post_item"
     android:layout_width="match_parent"
@@ -12,19 +11,19 @@
         android:orientation="vertical">
 
         <LinearLayout
-            tools:ignore="UseCompoundDrawables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="@dimen/min_margin"
-            android:gravity="center_vertical">
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/img_post_user"
-                android:contentDescription="@string/user_descr"
                 android:layout_width="@dimen/user_photo_dim"
                 android:layout_height="@dimen/user_photo_dim"
-                app:srcCompat="@drawable/ic_account" />
+                android:contentDescription="@string/user_descr"
+                tools:srcCompat="@drawable/ic_account" />
 
             <TextView
                 android:id="@+id/tv_post_title"
@@ -37,14 +36,16 @@
                 tools:text="@string/title_example" />
 
         </LinearLayout>
+
         <ImageView
-            android:contentDescription="@string/photo_descr"
             android:id="@+id/img_post_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/photo_descr"
             android:scaleType="fitStart"
-            app:srcCompat="@drawable/post_example" />
+            tools:srcCompat="@drawable/post_example" />
+
         <TextView
             android:id="@+id/tv_post_body"
             android:layout_width="match_parent"
