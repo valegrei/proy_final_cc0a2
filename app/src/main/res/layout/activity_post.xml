@@ -16,7 +16,22 @@
             <include
                 android:id="@+id/ly_post"
                 layout="@layout/post_layout"/>
+            <LinearLayout
+                android:id="@+id/progressbar"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:padding="@dimen/def_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="@string/text_loadign_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
             <TextView
+                android:layout_marginTop="@dimen/def_margin"
                 android:layout_marginStart="@dimen/min_margin"
                 android:id="@+id/tv_post_comments_count"
                 tools:text="@string/text_comentarios"

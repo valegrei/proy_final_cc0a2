@@ -40,6 +40,7 @@ public class FeedActivity extends AppCompatActivity implements AdapterPost.OnIte
     }
 
     private void loadPosts() {
+        mostrarCarga();
         RestApi.getInstance(this).getPosts(new Callback<RespPosts>() {
             @Override
             public void onResponse(@NonNull Call<RespPosts> call, @NonNull Response<RespPosts> response) {
@@ -52,14 +53,26 @@ public class FeedActivity extends AppCompatActivity implements AdapterPost.OnIte
                     Log.e(TAG, getString(R.string.err_download));
                     showSnackBar(R.string.err_download);
                 }
+                ocultarCarga();
             }
 
             @Override
             public void onFailure(@NonNull Call<RespPosts> call, @NonNull Throwable t) {
                 Log.e(TAG, t.getMessage(), t);
                 showSnackBar(R.string.err_download);
+                ocultarCarga();
             }
         });
+    }
+
+    private void mostrarCarga() {
+        binding.progressbar.setVisibility(View.VISIBLE);
+        binding.rvPosts.setVisibility(View.GONE);
+    }
+
+    private void ocultarCarga() {
+        binding.progressbar.setVisibility(View.GONE);
+        binding.rvPosts.setVisibility(View.VISIBLE);
     }
 
     @SuppressLint("NotifyDataSetChanged")
