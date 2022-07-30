@@ -16,8 +16,9 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.Collections;
 import java.util.List;
 
-import pe.edu.uni.valegrei.proyectofinal.data.RespComments;
-import pe.edu.uni.valegrei.proyectofinal.data.RestApi;
+import pe.edu.uni.valegrei.proyectofinal.adapters.AdapterComment;
+import pe.edu.uni.valegrei.proyectofinal.api.RespComments;
+import pe.edu.uni.valegrei.proyectofinal.api.RestApi;
 import pe.edu.uni.valegrei.proyectofinal.databinding.ActivityPostBinding;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +41,7 @@ public class PostActivity extends AppCompatActivity {
         if (intent.getExtras() != null) {
             post = intent.getParcelableExtra(POST);
         }
-        if(savedInstanceState!=null){
+        if (savedInstanceState != null) {
             post = savedInstanceState.getParcelable(POST);
         }
 
@@ -54,7 +55,7 @@ public class PostActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putParcelable(POST,post);
+        outState.putParcelable(POST, post);
         super.onSaveInstanceState(outState);
     }
 

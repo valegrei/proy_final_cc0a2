@@ -1,4 +1,4 @@
-package pe.edu.uni.valegrei.proyectofinal.data;
+package pe.edu.uni.valegrei.proyectofinal.api;
 
 import java.util.List;
 

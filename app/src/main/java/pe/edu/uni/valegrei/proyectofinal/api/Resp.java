@@ -1,4 +1,4 @@
-package pe.edu.uni.valegrei.proyectofinal.data;
+package pe.edu.uni.valegrei.proyectofinal.api;
 
 public class Resp {
     private Boolean ok;

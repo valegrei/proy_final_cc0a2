@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">Proyecto Final</string>
+    <string name="app_name">Blogs</string>
+    <!--Publicaciones-->
+    <string name="title_main">Publicaciones</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="lorem_ipsum_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</string>
     <string name="title_example">Lorem Ipsum Passage</string>
     <string name="text_comentarios">Comentarios: %d</string>
+    <string name="user_descr">Foto de usuario</string>
+    <string name="photo_descr">Imagen</string>
+    <string name="comment_descr">Comentar</string>
+    <string name="add_descr">Postear</string>
+    <string name="ok">OK</string>
+    <string name="err_download">Error al descargar</string>
+    <string name="text_loadign_comments">Cargando comentarios.</string>
+    <string name="text_loading_posts">Cargando Publicaciones</string>
+    <string name="description_logo">logo</string>
+    <!--Formularios-->
     <string name="text_title">Título*</string>
     <string name="hint_title">Ingrese un título</string>
     <string name="text_body">Contenido*</string>
@@ -16,21 +28,13 @@
     <string name="text_comment">Comentario*</string>
     <string name="hint_comment">Escriba su comentario</string>
     <string name="text_btn_comment">Comentar</string>
-    <string name="user_descr">Foto de usuario</string>
-    <string name="photo_descr">Imagen</string>
-    <string name="comment_descr">Comentar</string>
-    <string name="add_descr">Postear</string>
-    <string name="ok">OK</string>
-    <string name="err_download">Error al descargar</string>
-    <string name="text_loadign_comments">Cargando comentarios.</string>
-    <string name="text_loading_posts">Cargando Publicaciones</string>
     <string name="text_completar">Falta completar campos obligatorios.</string>
     <string name="err_upload_post">No se pudo publicar.</string>
     <string name="err_upload_comment">No se pudo comentar.</string>
-    <string name="title_main">Principal</string>
+    <string name="text_uploading_post">Subiendo publicación</string>
+    <string name="text_uploading_comment">Subiendo comentario</string>
+    <!--Titulos-->
     <string name="title_post">Ver Publicación</string>
     <string name="title_new_post">Publicar</string>
     <string name="title_new_comment">Comentar</string>
-    <string name="text_uploading_post">Subiendo publicación</string>
-    <string name="text_uploading_comment">Subiendo comentario</string>
 </resources>

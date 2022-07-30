@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="pe.edu.uni.valegrei.proyectofinal">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,21 +16,24 @@
         android:theme="@style/Theme.ProyectoFinal"
         tools:targetApi="31">
         <activity
-            android:label="@string/title_new_comment"
             android:name=".NewCommentActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_new_comment" />
         <activity
-            android:label="@string/title_new_post"
             android:name=".NewPostActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_new_post" />
         <activity
-            android:label="@string/title_post"
-            android:parentActivityName=".FeedActivity"
             android:name=".PostActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_post"
+            android:parentActivityName=".FeedActivity" />
         <activity
-            android:label="@string/title_main"
             android:name=".FeedActivity"
+            android:exported="false"
+            android:label="@string/title_main" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

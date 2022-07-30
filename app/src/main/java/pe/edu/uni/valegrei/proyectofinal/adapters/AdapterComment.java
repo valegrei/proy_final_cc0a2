@@ -1,4 +1,4 @@
-package pe.edu.uni.valegrei.proyectofinal;
+package pe.edu.uni.valegrei.proyectofinal.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -12,6 +12,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import pe.edu.uni.valegrei.proyectofinal.Comment;
+import pe.edu.uni.valegrei.proyectofinal.R;
+import pe.edu.uni.valegrei.proyectofinal.Utils;
 import pe.edu.uni.valegrei.proyectofinal.databinding.CommentLayoutBinding;
 
 public class AdapterComment extends RecyclerView.Adapter<AdapterComment.ViewHolder> {

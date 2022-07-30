@@ -15,8 +15,9 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.Collections;
 import java.util.List;
 
-import pe.edu.uni.valegrei.proyectofinal.data.RespPosts;
-import pe.edu.uni.valegrei.proyectofinal.data.RestApi;
+import pe.edu.uni.valegrei.proyectofinal.adapters.AdapterPost;
+import pe.edu.uni.valegrei.proyectofinal.api.RespPosts;
+import pe.edu.uni.valegrei.proyectofinal.api.RestApi;
 import pe.edu.uni.valegrei.proyectofinal.databinding.ActivityFeedBinding;
 import retrofit2.Call;
 import retrofit2.Callback;

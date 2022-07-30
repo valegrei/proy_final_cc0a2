@@ -1,4 +1,4 @@
-package pe.edu.uni.valegrei.proyectofinal;
+package pe.edu.uni.valegrei.proyectofinal.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -13,6 +13,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import pe.edu.uni.valegrei.proyectofinal.Post;
+import pe.edu.uni.valegrei.proyectofinal.R;
+import pe.edu.uni.valegrei.proyectofinal.Utils;
 import pe.edu.uni.valegrei.proyectofinal.databinding.PostItemLayoutBinding;
 
 public class AdapterPost extends RecyclerView.Adapter<AdapterPost.ViewHolder> {
@@ -59,11 +62,13 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.ViewHolder> {
         }
 
         public void bindData(Post post) {
+            binding.tvPostEmail.setText(post.getPostEmail());
+            binding.tvPostDate.setText(Utils.fechaFormato(post.getPostDate()));
             binding.tvPostTitle.setText(post.getPostTitle());
             binding.tvPostBody.setText(post.getShortBody());
             //Icono Usuario
             String urlIcon = context.getString(R.string.url_gravatar, Utils.md5(post.getPostEmail()).toLowerCase());
-            Log.d(TAG,urlIcon);
+            Log.d(TAG, urlIcon);
             Glide.with(binding.imgPostUser)
                     .load(urlIcon)
                     .circleCrop()
@@ -77,14 +82,14 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.ViewHolder> {
             } else {
                 binding.imgPostPhoto.setVisibility(View.GONE);
             }
-            binding.lyPostItem.setOnClickListener(v->{
-                if(listener!=null)
+            binding.lyPostItem.setOnClickListener(v -> {
+                if (listener != null)
                     listener.onitemClick(post);
             });
         }
     }
 
-    public interface OnItemClickListener{
+    public interface OnItemClickListener {
         void onitemClick(Post post);
     }
 }

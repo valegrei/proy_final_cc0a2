@@ -1,4 +1,4 @@
-package pe.edu.uni.valegrei.proyectofinal.data;
+package pe.edu.uni.valegrei.proyectofinal.api;
 
 
 import android.content.Context;
@@ -6,6 +6,9 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 import pe.edu.uni.valegrei.proyectofinal.Comment;
 import pe.edu.uni.valegrei.proyectofinal.Post;
 import pe.edu.uni.valegrei.proyectofinal.R;
@@ -31,11 +34,17 @@ public class RestApi {
         String apiUrl = context.getString(R.string.url_api);
 
         Gson gson = new GsonBuilder()
-                .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                 .create();
+
+        OkHttpClient client = new OkHttpClient.Builder()
+                .connectTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(apiUrl)
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

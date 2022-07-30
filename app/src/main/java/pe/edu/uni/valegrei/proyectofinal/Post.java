@@ -3,12 +3,17 @@ package pe.edu.uni.valegrei.proyectofinal;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.JsonAdapter;
+
 import java.util.Date;
+
+import pe.edu.uni.valegrei.proyectofinal.api.DateTypeAdapter;
 
 public class Post implements Parcelable, Comparable<Post> {
     private static final int SHORT_SIZE = 200;
     private String postId;
     private String postEmail;
+    @JsonAdapter(DateTypeAdapter.class)
     private Date postDate;
     private String postTitle;
     private String postBody;

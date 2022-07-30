@@ -1,4 +1,4 @@
-package pe.edu.uni.valegrei.proyectofinal.data;
+package pe.edu.uni.valegrei.proyectofinal.api;
 
 import pe.edu.uni.valegrei.proyectofinal.Comment;
 import pe.edu.uni.valegrei.proyectofinal.Post;

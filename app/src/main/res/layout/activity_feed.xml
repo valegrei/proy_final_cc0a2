@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ly_feed"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/ly_feed"
     tools:context=".FeedActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -14,20 +14,22 @@
         tools:listitem="@layout/post_item_layout" />
 
     <LinearLayout
-        android:layout_centerInParent="true"
         android:id="@+id/progressbar"
-        android:gravity="center"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone">
+
         <ProgressBar
-            android:padding="@dimen/def_margin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_margin" />
+
         <TextView
-            android:text="@string/text_loading_posts"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/text_loading_posts" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
