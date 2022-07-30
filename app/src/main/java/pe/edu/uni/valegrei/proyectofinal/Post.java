@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import java.util.Date;
 
-public class Post implements Parcelable {
+public class Post implements Parcelable, Comparable<Post> {
     private static final int SHORT_SIZE = 200;
     private String postId;
     private String postEmail;
@@ -13,6 +13,13 @@ public class Post implements Parcelable {
     private String postTitle;
     private String postBody;
     private String postPhoto;
+
+    public Post(String postEmail, String postTitle, String postBody, String postPhoto) {
+        this.postEmail = postEmail;
+        this.postTitle = postTitle;
+        this.postBody = postBody;
+        this.postPhoto = postPhoto;
+    }
 
     public String getPostId() {
         return postId;
@@ -63,15 +70,15 @@ public class Post implements Parcelable {
     }
 
     public String getShortBody() {
-        if(postBody.length() < SHORT_SIZE){
+        if (postBody.length() < SHORT_SIZE) {
             return postBody;
-        }else{
-            return postBody.substring(0,SHORT_SIZE)+"...";
+        } else {
+            return postBody.substring(0, SHORT_SIZE) + "...";
         }
     }
 
-    public boolean hasPostPhoto(){
-        return postPhoto!=null && !postPhoto.isEmpty();
+    public boolean hasPostPhoto() {
+        return postPhoto != null && !postPhoto.isEmpty();
     }
 
 
@@ -124,4 +131,11 @@ public class Post implements Parcelable {
             return new Post[size];
         }
     };
+
+    @Override
+    public int compareTo(Post o) {
+        if (getPostDate() == null || o.getPostDate() == null)
+            return 0;
+        return -getPostDate().compareTo(o.getPostDate());
+    }
 }

@@ -1,52 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ly_new_comment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/def_margin"
     tools:context=".NewCommentActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/text_email"
-        android:textSize="@dimen/post_title_size"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:padding="@dimen/def_margin">
 
-    <EditText
-        android:id="@+id/edt_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="TextContrastCheck"
-        android:autofillHints="emailAddress"
-        android:layout_marginBottom="@dimen/min_margin"
-        android:hint="@string/hint_email"
-        android:inputType="textEmailAddress"
-        android:minHeight="@dimen/min_target_height" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_email"
+            android:textSize="@dimen/post_title_size"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/text_comment"
-        android:textSize="@dimen/post_title_size"
-        android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:autofillHints="emailAddress"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="@dimen/min_target_height"
+            tools:ignore="TextContrastCheck" />
 
-    <EditText
-        android:id="@+id/edt_comment"
-        android:autofillHints=""
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="TextContrastCheck"
-        android:layout_marginBottom="@dimen/min_margin"
-        android:hint="@string/hint_comment"
-        android:inputType="textMultiLine"
-        android:minHeight="@dimen/min_target_height" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_comment"
+            android:textSize="@dimen/post_title_size"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_comment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/text_btn_comment" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:autofillHints=""
+            android:hint="@string/hint_comment"
+            android:inputType="textMultiLine"
+            android:minHeight="@dimen/min_target_height"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/text_btn_comment" />
+        <LinearLayout
+            android:id="@+id/progressbar"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:padding="@dimen/def_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/text_uploading_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

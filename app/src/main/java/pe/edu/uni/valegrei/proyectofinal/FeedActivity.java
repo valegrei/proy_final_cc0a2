@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Collections;
 import java.util.List;
 
 import pe.edu.uni.valegrei.proyectofinal.data.RespPosts;
@@ -32,11 +33,22 @@ public class FeedActivity extends AppCompatActivity implements AdapterPost.OnIte
         binding = ActivityFeedBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        adapter = new AdapterPost(this,null, this);
+        adapter = new AdapterPost(this, null, this);
         binding.rvPosts.setLayoutManager(new LinearLayoutManager(this));
         binding.rvPosts.setAdapter(adapter);
 
+        binding.btnPost.setOnClickListener(v -> nuevoPost());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         loadPosts();
+    }
+
+    private void nuevoPost() {
+        Intent intent = new Intent(this, NewPostActivity.class);
+        startActivity(intent);
     }
 
     private void loadPosts() {
@@ -47,9 +59,11 @@ public class FeedActivity extends AppCompatActivity implements AdapterPost.OnIte
                 if (response.isSuccessful()) {
                     RespPosts respPosts = response.body();
                     if (respPosts != null) {
-                        actualizarLista(respPosts.getPosts());
+                        List<Post> posts = respPosts.getPosts();
+                        Collections.sort(posts);
+                        actualizarLista(posts);
                     }
-                }else{
+                } else {
                     Log.e(TAG, getString(R.string.err_download));
                     showSnackBar(R.string.err_download);
                 }
@@ -81,8 +95,9 @@ public class FeedActivity extends AppCompatActivity implements AdapterPost.OnIte
         adapter.notifyDataSetChanged();
     }
 
-    private void showSnackBar(int resId){
-        Snackbar.make(binding.lyFeed, resId, Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, v -> {}).show();
+    private void showSnackBar(int resId) {
+        Snackbar.make(binding.lyFeed, resId, Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, v -> {
+        }).show();
     }
 
     @Override

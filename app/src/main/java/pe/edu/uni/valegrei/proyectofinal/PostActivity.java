@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Collections;
 import java.util.List;
 
 import pe.edu.uni.valegrei.proyectofinal.data.RespComments;
@@ -39,13 +40,34 @@ public class PostActivity extends AppCompatActivity {
         if (intent.getExtras() != null) {
             post = intent.getParcelableExtra(POST);
         }
+        if(savedInstanceState!=null){
+            post = savedInstanceState.getParcelable(POST);
+        }
 
         adapter = new AdapterComment(this, null);
         binding.rvComments.setLayoutManager(new LinearLayoutManager(this));
         binding.rvComments.setAdapter(adapter);
+        binding.btnNewComment.setOnClickListener(v -> nuevoComentario());
 
         cargarPost();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putParcelable(POST,post);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         cargarComentarios();
+    }
+
+    private void nuevoComentario() {
+        Intent intent = new Intent(this, NewCommentActivity.class);
+        intent.putExtra(NewCommentActivity.POST_ID, post.getPostId());
+        startActivity(intent);
     }
 
     private void cargarComentarios() {
@@ -56,7 +78,9 @@ public class PostActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     RespComments respComments = response.body();
                     if (respComments != null) {
-                        actualizarLista(respComments.getComments());
+                        List<Comment> comments = respComments.getComments();
+                        Collections.sort(comments);
+                        actualizarLista(comments);
                     }
                 } else {
                     Log.e(TAG, getString(R.string.err_download));

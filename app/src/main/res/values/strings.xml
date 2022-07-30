@@ -4,16 +4,16 @@
     <string name="lorem_ipsum_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</string>
     <string name="title_example">Lorem Ipsum Passage</string>
     <string name="text_comentarios">Comentarios: %d</string>
-    <string name="text_title">Título</string>
+    <string name="text_title">Título*</string>
     <string name="hint_title">Ingrese un título</string>
-    <string name="text_body">Contenido</string>
+    <string name="text_body">Contenido*</string>
     <string name="hint_body">Escriba su post</string>
     <string name="text_image">URL de Imagen</string>
     <string name="hint_url_image">Ingrese una url de la imagen</string>
-    <string name="text_email">Correo</string>
+    <string name="text_email">Correo*</string>
     <string name="hint_email">Ingrese su correo</string>
     <string name="text_post">Publicar</string>
-    <string name="text_comment">Comentario</string>
+    <string name="text_comment">Comentario*</string>
     <string name="hint_comment">Escriba su comentario</string>
     <string name="text_btn_comment">Comentar</string>
     <string name="user_descr">Foto de usuario</string>
@@ -24,4 +24,13 @@
     <string name="err_download">Error al descargar</string>
     <string name="text_loadign_comments">Cargando comentarios.</string>
     <string name="text_loading_posts">Cargando Publicaciones</string>
+    <string name="text_completar">Falta completar campos obligatorios.</string>
+    <string name="err_upload_post">No se pudo publicar.</string>
+    <string name="err_upload_comment">No se pudo comentar.</string>
+    <string name="title_main">Principal</string>
+    <string name="title_post">Ver Publicación</string>
+    <string name="title_new_post">Publicar</string>
+    <string name="title_new_comment">Comentar</string>
+    <string name="text_uploading_post">Subiendo publicación</string>
+    <string name="text_uploading_comment">Subiendo comentario</string>
 </resources>

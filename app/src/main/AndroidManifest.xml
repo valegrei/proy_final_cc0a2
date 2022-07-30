@@ -15,15 +15,20 @@
         android:theme="@style/Theme.ProyectoFinal"
         tools:targetApi="31">
         <activity
+            android:label="@string/title_new_comment"
             android:name=".NewCommentActivity"
             android:exported="false" />
         <activity
+            android:label="@string/title_new_post"
             android:name=".NewPostActivity"
             android:exported="false" />
         <activity
+            android:label="@string/title_post"
+            android:parentActivityName=".FeedActivity"
             android:name=".PostActivity"
             android:exported="false" />
         <activity
+            android:label="@string/title_main"
             android:name=".FeedActivity"
             android:exported="true">
             <intent-filter>

@@ -19,16 +19,18 @@
             <LinearLayout
                 android:id="@+id/progressbar"
                 android:gravity="center"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ProgressBar
                     android:padding="@dimen/def_margin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
+
                 <TextView
-                    android:text="@string/text_loadign_comments"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_loadign_comments" />
             </LinearLayout>
             <TextView
                 android:layout_marginTop="@dimen/def_margin"
