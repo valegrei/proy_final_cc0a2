@@ -20,4 +20,6 @@
     <string name="photo_descr">Imagen</string>
     <string name="comment_descr">Comentar</string>
     <string name="add_descr">Postear</string>
+    <string name="ok">Ok</string>
+    <string name="err_download">Error al descargar</string>
 </resources>
