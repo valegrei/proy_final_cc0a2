@@ -6,25 +6,23 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import pe.edu.uni.valegrei.proyectofinal.databinding.ActivitySplashBinding;
+
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
-    ImageView imgLogo;
-    Animation animationImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-
-        imgLogo = findViewById(R.id.img_logo);
+        ActivitySplashBinding binding = ActivitySplashBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         //Carga animacion antihorario y escalando
-        animationImage = AnimationUtils.loadAnimation(this, R.anim.image_animation);
-        imgLogo.setAnimation(animationImage);
+        Animation animationImage = AnimationUtils.loadAnimation(this, R.anim.image_animation);
+        binding.imgLogo.setAnimation(animationImage);
 
         //Lanza Main despues de 5 segundos
         new CountDownTimer(5000, 1000) {
